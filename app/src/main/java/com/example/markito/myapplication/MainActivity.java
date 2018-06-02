@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadData() {
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("", new JsonHttpResponseHandler() {
+        client.get("http://181.114.179.122:7070/api/v1.0/food/", new JsonHttpResponseHandler() {
             private void onSuccess(int statusCode, PreferenceActivity.Header[] headers, JSONObject response) {
                 try {
                     JSONArray listData = response.getJSONArray("info");
